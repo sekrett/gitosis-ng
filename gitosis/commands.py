@@ -3,7 +3,7 @@
 #
 # The list commands will mostly follow the same guidelines as gitweb.
 # In order for a repository to be shown, it must be viewable by gitweb
-# and the user must have either readonly or writeable access.
+# and the user must have either readonly or writable access.
 #
 #   gitosis.conf:
 #      [gitosis]
@@ -252,7 +252,7 @@ def add_repo(config, user, args):
     config.set(section, 'url', "")
     config.set(section, 'owner', user)
     config.set(section, 'description', "")
-    config.set(section, 'writeable', user)
+    config.set(section, 'writable', user)
 
     try:
         update_config_file(config, user, repo)
